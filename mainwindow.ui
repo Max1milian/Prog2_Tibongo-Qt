@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>860</width>
+    <height>729</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,11 +17,16 @@
    <widget class="QPushButton" name="pushButton_reset">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>390</y>
-      <width>101</width>
+      <x>450</x>
+      <y>480</y>
+      <width>121</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>reset</string>
@@ -30,11 +35,16 @@
    <widget class="QPushButton" name="pushButton_drehen_rechts">
     <property name="geometry">
      <rect>
-      <x>689</x>
-      <y>330</y>
-      <width>101</width>
+      <x>710</x>
+      <y>420</y>
+      <width>121</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>drehen rechts</string>
@@ -43,11 +53,16 @@
    <widget class="QPushButton" name="pushButton_bewegen_rechts">
     <property name="geometry">
      <rect>
-      <x>689</x>
-      <y>360</y>
-      <width>101</width>
+      <x>710</x>
+      <y>450</y>
+      <width>121</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>bewegen rechts</string>
@@ -56,11 +71,16 @@
    <widget class="QPushButton" name="pushButton_naechster_stein">
     <property name="geometry">
      <rect>
-      <x>689</x>
-      <y>390</y>
-      <width>101</width>
+      <x>710</x>
+      <y>480</y>
+      <width>121</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>naechster Stein</string>
@@ -70,10 +90,15 @@
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>330</y>
-      <width>101</width>
+      <y>420</y>
+      <width>121</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>bewegen hoch</string>
@@ -83,10 +108,15 @@
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>360</y>
-      <width>101</width>
+      <y>450</y>
+      <width>121</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>flip</string>
@@ -96,10 +126,15 @@
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>390</y>
-      <width>101</width>
+      <y>480</y>
+      <width>121</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>bewegen runter</string>
@@ -108,11 +143,16 @@
    <widget class="QPushButton" name="pushButton_drehen_links">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>330</y>
-      <width>101</width>
+      <x>450</x>
+      <y>420</y>
+      <width>121</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>drehen links</string>
@@ -121,54 +161,173 @@
    <widget class="QPushButton" name="pushButton_bewegen_links">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>360</y>
-      <width>101</width>
+      <x>450</x>
+      <y>450</y>
+      <width>121</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>bewegen links</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="Logo">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
+   <widget class="QGraphicsView" name="graphicsView_Spielfeld">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>460</y>
-      <width>241</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="html">
-     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;TIBONGO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="graphicsView">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>20</y>
-      <width>381</width>
-      <height>391</height>
+      <x>20</x>
+      <y>0</y>
+      <width>401</width>
+      <height>521</height>
      </rect>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="graphicsView_2">
+   <widget class="QGraphicsView" name="graphicsView_Spielsteine">
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>140</y>
+      <y>210</y>
       <width>351</width>
-      <height>151</height>
+      <height>191</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_stein1">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>360</y>
+      <width>96</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stein1</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_stein2">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>360</y>
+      <width>96</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stein2</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_stein3">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>360</y>
+      <width>96</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stein3</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_stein4">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>360</y>
+      <width>96</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stein4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_punkte">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Punkte</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_eingaben">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>50</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Eingaben</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_zeit">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>90</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Restzeit</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber_punkte">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>10</y>
+      <width>64</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber_eingaben">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>50</y>
+      <width>64</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber_zeit">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>90</y>
+      <width>64</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_logo">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>540</y>
+      <width>421</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:72pt;&quot;&gt;Logo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
@@ -177,7 +336,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>860</width>
      <height>22</height>
     </rect>
    </property>

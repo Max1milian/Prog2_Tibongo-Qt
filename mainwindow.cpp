@@ -97,7 +97,7 @@ MainWindow::MainWindow(QWidget *parent)
     //-------------------------------------------------------------------------------------------------------
     //Initialisieren der Aufgabe
     //-------------------------------------------------------------------------------------------------------
-    Aufgabe* aufgabe = new Aufgabe();
+    std::unique_ptr<Aufgabe> aufgabe = std::make_unique<Aufgabe>();
     aufgabe->initSchwer();
 
     //Verstecke Button 4 falls nicht benötigt.
@@ -166,7 +166,7 @@ MainWindow::MainWindow(QWidget *parent)
     //-------------------------------------------------------------------------------------------------------
     connect (ui->pushButton_bewegen_hoch, &QPushButton::clicked, [=] ()
     {
-                /* IHR CODE */
+
     });
     connect (ui->pushButton_bewegen_runter, &QPushButton::clicked, [=] ()
     {
