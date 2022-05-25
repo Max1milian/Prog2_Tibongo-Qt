@@ -29,6 +29,9 @@ bool Aufgabe::geloest() {
   return true;
 }
 
+Aufgabe::Aufgabe(){
+
+}
 void Aufgabe::zeichne() {
   for (auto i = 0; i < steine.size(); i++) {
     steine.at(i)->zeichne();

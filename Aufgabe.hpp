@@ -6,6 +6,7 @@
 
 class Aufgabe {
   friend class MainWindow;
+  friend class Spiel;
 
 private:
   std::vector<Spielstein *> steine;
@@ -20,6 +21,7 @@ public:
   void initSchwer();
   //übergibt die steine des Konstruktors in den Vektor, damit wir sie auf dem
   // Spielfeld platzieren können
+  Aufgabe();
   Aufgabe(Spielstein *stein1_ptr, Spielstein *stein2_ptr,
           Spielstein *stein3_ptr, Spielstein *loesung_ptr) {
     steine.push_back(stein1_ptr);

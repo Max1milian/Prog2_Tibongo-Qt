@@ -43,6 +43,7 @@ public:
   void rotation_rechts();
   void rotation_links();
   void flip();
+  std::string getFarbe();
 
   std::vector<Position> *getPositionen();
   bool innerhalb(Position pos) const;

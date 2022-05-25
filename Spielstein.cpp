@@ -732,3 +732,7 @@ Spielstein Spielstein::operator+(const Spielstein &rhs) const {
   summe.orientierung = orientierung + rhs.orientierung;
   return summe;
 }
+  std::string Spielstein::getFarbe()
+  {
+      return farbe;
+  }

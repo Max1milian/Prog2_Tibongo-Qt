@@ -124,27 +124,27 @@ MainWindow::MainWindow(QWidget *parent)
   // Positionen aus felder [0][0]
   //-------------------------------------------------------------------------------------------------------
   // Aufgabe 6c)
-  auto zeichneLegende = [=](bool visible) {
-    // clear field
-    for (int x = 0; x < 16; x++)
-      for (int y = 0; y < 4; y++) {
-        legende_blocks[x][y]->setBrush(Qt::white);
-      }
-
-    if (visible) {
-      for (size_t i = 0; i < aufgabe->steine.size(); i++) {
-
-        Spielstein legende_stein(aufgabe->steine[i]->getTyp());
-        legende_stein.position = Position(1 + 4 * i, 0);
-        for (int x = 0; x < 16; x++)
-          for (int y = 0; y < 4; y++) {
-            if (legende_stein.innerhalb(Position(x, y)))
-              legende_blocks[x][y]->setBrush(
-                  Cursor::QtFarbwandler(legende_stein.getFarbe()));
+  auto zeichneLegende = [=] (bool visible)
+      {
+          std::string color;
+          int offset_X = 0;  //zeichnet den block an der nächsten position. Wir starten bei 0, 0 und jeder stein bekommt ein 4x4 feld
+          for (auto spielstein : aufgabe->steine)
+          {
+              color = spielstein->getFarbe();
+              for (auto pos : spielstein->felder[0][0])
+              {
+                  if (visible)
+                  {
+                      legende_blocks[offset_X + pos.getX()][pos.getY()]->setBrush(Cursor::QtFarbwandler(color));
+                  }
+                  else
+                  {
+                      legende_blocks[offset_X + pos.getX()][pos.getY()]->setBrush(Qt::white);
+                  }
+              }
+              offset_X += 4; //nächster Block
           }
-      }
-    }
-  };
+      };
   //-------------------------------------------------------------------------------------------------------
   // Zeichne-Funktionen für Steine in die Spielfläche - Zeichnet über blocks
   // Anmerkung: Ist visible false wird der Stein in weiß gezeichnet, sonst in
