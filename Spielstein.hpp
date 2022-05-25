@@ -16,48 +16,42 @@
 #define SPIELSTEIN_I4 12
 #define SPIELSTEIN_FREI 13
 
-
+#include "Configuration.h"
+#include "Console.h"
+#include "Cursor.h"
 #include "Position.hpp"
 #include <string>
 #include <vector>
-#include "Console.h"
-#include "Cursor.h"
-#include "Configuration.h"
 
-class Spielstein
-{
-	
+class Spielstein {
+
 protected:
-	
-	int typ = SPIELSTEIN_FREI;
-	std::string name;
-	char orientierung = 0;
-	char seite = 0;
-	std::string farbe = CURSOR_WEISS;
+  int typ = SPIELSTEIN_FREI;
+  std::string name;
+  char orientierung = 0;
+  char seite = 0;
+  std::string farbe = CURSOR_WEISS;
 
 public:
-	std::vector<Position> felder[2][4];
-	Position position;
-	void init();
-	void zeichne();
-	void loesche();
-	
-	void bewegen(int richtung);
-	void rotation_rechts();
-	void rotation_links();
-	void flip();
+  std::vector<Position> felder[2][4];
+  Position position;
+  void init();
+  void zeichne();
+  void loesche();
 
-	std::vector<Position>* getPositionen();
-	bool innerhalb(Position pos) const;
-	
-	bool ueberlapp(Spielstein& sp);
+  void bewegen(int richtung);
+  void rotation_rechts();
+  void rotation_links();
+  void flip();
 
-	Spielstein(int typ) : typ(typ)
-	{
-		init();
-	}
-	virtual ~Spielstein() {};
+  std::vector<Position> *getPositionen();
+  bool innerhalb(Position pos) const;
 
-	Spielstein operator+ (const Spielstein& rhs) const;
+  bool ueberlapp(Spielstein &sp);
+
+  Spielstein(int typ) : typ(typ) { init(); }
+  virtual ~Spielstein(){};
+
+  Spielstein operator+(const Spielstein &rhs) const;
 };
 #endif
